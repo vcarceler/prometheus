@@ -521,6 +521,13 @@ scrape_configs:
         - 192.168.245.219:9100
         - 192.168.245.234:9100
 
+  - job_name: carret13-smx2d
+    static_configs:
+      - targets:
+        - 192.168.244.106:9100
+        - 192.168.244.113:9100
+
+
   - job_name: carret14-asix1
     static_configs:
       - targets:
