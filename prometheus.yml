@@ -343,6 +343,7 @@ scrape_configs:
         - 192.168.17.24 # DPTINF
         - 192.168.20.98 # CAPS
         - 192.168.21.52 # Multifunción secretaría
+        - 192.168.21.51 
         
     metrics_path: /snmp
     params:
