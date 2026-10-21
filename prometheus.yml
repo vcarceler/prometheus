@@ -348,7 +348,7 @@ scrape_configs:
     metrics_path: /snmp
     params:
       auth: [public_v1]
-      module: [printer_mib]
+      module: [printer_mib,hrDevice,if_mib]
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
