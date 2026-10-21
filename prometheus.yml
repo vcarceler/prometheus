@@ -330,22 +330,33 @@ scrape_configs:
     scrape_interval: 600s
     scrape_timeout: 60s
     static_configs:
-      - targets:
-        - 10.241.14.193
-        - 10.241.14.194
-          labels: {nombre: Konica-Secretaria, ubicacion: "0.09 Secretaría"}
-        - 10.241.14.195
-        - 10.241.14.196
-        - 10.241.14.197
-        - 192.168.0.213 # Sharp
-        - 192.168.0.214 # HP Secretaría
-        - 192.168.17.19 # DPTCAT
-        - 192.168.17.23 # DPTADM
-        - 192.168.17.24 # DPTINF
-        - 192.168.20.98 # CAPS
-        - 192.168.21.52 # Multifunción secretaría
-        - 192.168.21.51 # HP M452dn de Secretaría 
-        
+      - targets: [10.241.14.196]
+        labels: {nombre: "Konica-A", ubicacion: "0.17 Sala de profesores"}
+      - targets: [10.241.14.193]
+        labels: {nombre: "Konica-B", ubicacion: "0.17 Sala de profesores"}
+      - targets: [10.241.14.197]
+        labels: {nombre: "Konica-C", ubicacion: "0.17 Sala de profesores"}
+      - targets: [10.241.14.195]
+        labels: {nombre: "Konica", ubicacion: "1.10 Sala de guardias"}
+      - targets: [10.241.14.194]
+        labels: {nombre: "Konica-Secretaria", ubicacion: "0.09 Secretaría"}
+      - targets: [192.168.0.213]
+        labels: {nombre: "Sharp-Consergeria", ubicacion: "Conserjería"}
+      - targets: [192.168.0.214]
+        labels: {nombre: "HP Secretaría", ubicacion: "0.09 Secretaría"}
+      - targets: [192.168.21.52]
+        labels: {nombre: "Multifunción Secretaría", ubicacion: "0.09 Secretaría"}
+      - targets: [192.168.21.51]
+        labels: {nombre: "HP M452dn Secretaría", ubicacion: "0.09 Secretaría"}
+      - targets: [192.168.20.98]
+        labels: {nombre: "CAPS", ubicacion: "1.11 Caps d'estudis"}
+      - targets: [192.168.17.24]
+        labels: {nombre: "DPTINF-HP", ubicacion: "0.07 Dept. Informática"}
+      - targets: [192.168.17.23]
+        labels: {nombre: "DPTADM-HP", ubicacion: "Dept. Administración"}
+      - targets: [192.168.17.19]
+        labels: {nombre: "DPTCAT", ubicacion: "Dept. Català"}
+
     metrics_path: /snmp
     params:
       auth: [public_v1]
