@@ -333,6 +333,7 @@ scrape_configs:
       - targets:
         - 10.241.14.193
         - 10.241.14.194
+          labels: {nombre: Konica-Secretaria, ubicacion: "0.09 Secretaría"}
         - 10.241.14.195
         - 10.241.14.196
         - 10.241.14.197
