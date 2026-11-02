@@ -95,14 +95,14 @@ scrape_configs:
       ups: [ "ups" ]
 
   # NUT en portátil TEST SAI
-  - job_name: nut-test
-    metrics_path: /ups_metrics
-    static_configs:
-      - targets: ['192.168.243.5:9199']
-        labels:
-          ups:  "ups-test"
-    params:
-      ups: [ "ups" ]
+  #- job_name: nut-test
+  #  metrics_path: /ups_metrics
+  #  static_configs:
+  #    - targets: ['192.168.243.5:9199']
+  #      labels:
+  #        ups:  "ups-test"
+  #  params:
+  #    ups: [ "ups" ]
 
   # Job para realizar pruebas http a través de blackbox-exporter
   - job_name: "http-prober"
@@ -113,6 +113,7 @@ scrape_configs:
     static_configs:
       - targets: # Sitios a probar
           - "blog.elpuig.xeill.net"
+          - "cloud.elpuig.xeill.net"
           - "dmoj.elpuig.xeill.net"
           - "elpuig.xeill.net"
           - "moodle.elpuig.xeill.net"
@@ -394,6 +395,7 @@ scrape_configs:
                     - '192.168.0.18:9100' # baba-yaga-2004
                     - '192.168.0.19:9100' # matrioska-2004
                     - '192.168.0.20:9100' # gateway-web-2404
+                    - '192.168.0.102:9100' # nextcloud-2604
                     - '10.0.0.13:9100' # matrioska-ex44-2204
                     - '10.0.0.14:9100' # ex44
                     - '10.0.0.16:9100' # moodle-42-2204
